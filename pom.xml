@@ -108,7 +108,18 @@
     <finalName>Weixin</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
-          
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>tomcat-maven-plugin</artifactId>
+              <version>2.2</version>
+              <configuration>
+                  <path>/weixin</path>
+                  <url>http://119.23.216.172:8080</url>
+                  <username>admin</username>
+                  <password>123456</password>
+                  <warDirectory>/usr/local/tomcat/webapps</warDirectory>
+              </configuration>
+          </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.0.0</version>
